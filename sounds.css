@@ -1,0 +1,364 @@
+/* sounds.css - Combined external stylesheet for all pages */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f6f1;
+  color: #3e2c23;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #a1866f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe6cc;
+}
+
+main {
+  padding: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+  background-color: #fff7f0;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(160, 130, 100, 0.1);
+}
+
+.feature-box {
+  flex: 1;
+  min-width: 220px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-box img {
+  width: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #d8c2b0;
+  border-radius: 6px;
+  background-color: #fdfaf6;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #a1866f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8c6d54;
+}
+
+footer {
+  background-color: #a1866f;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer .privacy-notice {
+  margin-top: 5px;
+}
+
+section.librarian-info {
+  background-color: #fff7f0;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(160, 130, 100, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.librarian-img {
+  flex: 0 0 220px;
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.librarian-details {
+  flex: 1;
+}
+
+.librarian-details h2 {
+  color: #5c4033;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.librarian-details p {
+  margin-bottom: 20px;
+}
+
+.librarian-details ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.librarian-details li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  section.librarian-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .librarian-details {
+    text-align: left;
+  }
+
+  .librarian-details ul {
+    padding-left: 15px;
+  }
+}
+    /* roles Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f6f1;
+      color: #3e2c23;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #a1866f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe6cc;
+    }
+
+    /* Main Content */
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background-color: #fff7f0;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(160, 130, 100, 0.1);
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    /*faq*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f6f1;
+      color: #3e2c23;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #a1866f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe6cc;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .chatbox {
+      background-color: #fff7f0;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(160, 130, 100, 0.1);
+    }
+
+    label, input, button {
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #d8c2b0;
+      border-radius: 6px;
+      background-color: #fdfaf6;
+    }
+
+    button {
+      background-color: #a1866f;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #8c6d54;
+    }
+
+    .answer {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fff;
+      border-left: 4px solid #a1866f;
+      border-radius: 6px;
+      color: #4d3a2a;
+      min-height: 40px;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      background-color: #a1866f;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
