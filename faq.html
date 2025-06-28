@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-en="FAQ Chatbot - Sound Librarian Portal" data-ms="Soalan Lazim Chatbot - Portal Pustakawan Bunyi">FAQ Chatbot - Sound Librarian Portal</title>
+  <link rel="stylesheet" href="sounds.css">
+  <script src="language.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="language-switcher" style="text-align: right; margin: 10px;">
+      <label for="language-select">Language:</label>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="ms">BM</option>
+      </select>
+    </div>
+        <img src="https://i.imgur.com/wdxn8IO.jpg" alt="Sounds Logo" class="logo" />
+    <h1 data-en="FAQ Chatbot" data-ms="Chatbot Soalan Lazim">FAQ Chatbot</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a></li>
+        <li><a href="about.html" data-en="About" data-ms="Tentang">About</a></li>
+        <li><a href="roles.html" data-en="Roles" data-ms="Peranan">Roles</a></li>
+        <li><a href="faq.html" data-en="FAQ" data-ms="Soalan Lazim">FAQ</a></li>
+        <li><a href="contact.html" data-en="Contact" data-ms="Hubungi">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="chatbox">
+      <label for="userQuestion" data-en="Ask me a question about librarianship:" data-ms="Tanya saya soalan tentang kepustakawanan:">Ask me a question about librarianship:</label>
+      <input type="text" id="userQuestion" placeholder="e.g. What is a sound librarian?" data-en="e.g. What is a sound librarian?" data-ms="cth. Apakah itu pustakawan bunyi?" />
+      <button onclick="getAnswer()" data-en="Ask" data-ms="Tanya">Ask</button>
+      <div class="answer" id="answerBox"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sounds Librarian Portal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const faq = {
+      "what is a sound librarian?": "A sound librarian manages and archives all types of audio content, including educational materials, interviews, podcasts, music, and cultural recordings.",
+      "what does a modern librarian do?": "Modern librarians manage digital content, assist with research, provide tech and literacy support, and engage with communities using online platforms.",
+      "are libraries still relevant?": "Yes! Libraries are essential learning spaces that offer free access to digital tools, knowledge, and safe community support.",
+      "can i access the library from my phone?": "Yes, many libraries provide mobile-friendly websites or apps for e-books, catalogs, and digital services.",
+      "i have low digital skills will someone help me?": "Absolutely! Librarians are trained to guide users at all levels, including beginners. Just ask — we’re here to help!",
+      "what kind of audio do librarians manage?": "We handle various audio formats — lectures, oral histories, community voices, music, podcasts, and sound archives.",
+      "what equipment do sound librarians use?": "We use directional microphones, mixers, digital audio workstations (DAWs) like Audacity or Pro Tools, and noise reduction tools.",
+      "how do librarians support education?": "We offer access to academic resources, teach information literacy, and help users evaluate sources critically.",
+      "can visually impaired users access audio content?": "Yes. Sound librarians ensure accessibility by providing transcripts, captions, and screen reader–friendly formats.",
+      "what is digital literacy and why is it important?": "Digital literacy means having the skills to use technology confidently and safely — librarians help bridge that gap for all users."
+    };
+
+    function simulateTyping(text, element, callback) {
+      let i = 0;
+      element.textContent = "";
+      const typingInterval = setInterval(() => {
+        element.textContent += text.charAt(i);
+        i++;
+        if (i === text.length) {
+          clearInterval(typingInterval);
+          if (callback) callback();
+        }
+      }, 30);
+    }
+
+    function getAnswer() {
+      const questionInput = document.getElementById("userQuestion");
+      const question = questionInput.value.toLowerCase().trim();
+      const answerBox = document.getElementById("answerBox");
+
+      if (!question) {
+        answerBox.textContent = "Please ask a question!";
+        return;
+      }
+
+      answerBox.textContent = "Typing...";
+
+      setTimeout(() => {
+        const response = faq[question];
+        if (response) {
+          simulateTyping(response, answerBox);
+        } else {
+          simulateTyping("Sorry, I couldn't find an answer for that. Try rephrasing or ask a different question!", answerBox);
+        }
+      }, 1000);
+
+      questionInput.value = "";
+      questionInput.focus();
+
+      answerBox.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+
+    document.getElementById("userQuestion").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        getAnswer();
+      }
+    });
+  </script>
+</body>
+</html>
