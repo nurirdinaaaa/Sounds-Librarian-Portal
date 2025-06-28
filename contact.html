@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Sound Librarian Portal</title>
+  <link rel="stylesheet" href="sounds.css">
+  <script src="language.js" defer></script>
+</head>
+<body>
+     <header>
+    <div class="language-switcher" style="text-align: right; margin: 10px;">
+      <label for="language-select">Language:</label>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="ms">BM</option>
+      </select>
+    </div>
+        <img src="https://i.imgur.com/wdxn8IO.jpg" alt="Sounds Logo" class="logo" />
+     <h1 data-en="Contact Us" data-ms="Hubungi Kami">Contact Us</h1>
+    <nav style="width: 100%;">
+      <ul>
+        <li><a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a></li>
+        <li><a href="about.html" data-en="About" data-ms="Tentang">About</a></li>
+        <li><a href="roles.html" data-en="Roles" data-ms="Peranan">Roles</a></li>
+        <li><a href="faq.html" data-en="FAQ" data-ms="Soalan Lazim">FAQ</a></li>
+        <li><a href="contact.html" data-en="Contact" data-ms="Hubungi">Contact</a></li>
+      </ul>
+    </nav>
+   </header>
+
+  <main>
+    <section>
+      <h2 data-en="We'd love to hear from you" data-ms="Kami ingin mendengar daripada anda">We'd love to hear from you</h2>
+      <p data-en="Please fill out the form below or reach us through our social media handles."
+         data-ms="Sila isi borang di bawah atau hubungi kami melalui media sosial.">
+        Please fill out the form below or reach us through our social media handles.
+      </p>
+
+      <form action="https://formspree.io/f/mwponbey" method="POST">
+        <label for="email">
+          <span data-en="Your Email:" data-ms="Emel Anda:">Your Email:</span>
+          <input type="email" id="email" name="email" required />
+        </label>
+
+        <label for="message">
+          <span data-en="Your Message:" data-ms="Mesej Anda:">Your Message:</span>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
+
+        <button type="submit" data-en="Send" data-ms="Hantar">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sounds Librarian Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
